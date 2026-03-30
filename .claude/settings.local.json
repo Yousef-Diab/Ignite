@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npx --version)",
+      "Bash(powershell -NoProfile -Command \"Get-WmiObject -Namespace root/cimv2 -Class Win32_VideoController | Select-Object CurrentHorizontalResolution,CurrentVerticalResolution,CurrentRefreshRate | Format-List\" 2>/dev/null)",
+      "Bash(powershell -NoProfile -Command \"Add-Type -TypeDefinition @'\nusing System;\nusing System.Runtime.InteropServices;\npublic class DisplayHelper {\n    [DllImport\\(\\\\\"user32.dll\\\\\"\\)] public static extern int ChangeDisplaySettingsEx\\(string lpszDeviceName, IntPtr lpDevMode, IntPtr hwnd, uint dwflags, IntPtr lParam\\);\n}\n'@; Write-Host 'P/Invoke works'\" 2>/dev/null)",
+      "Bash(powershell -NoProfile -Command \"Get-Process | Select-Object -First 3 -Property Name,Id,HasExited\" 2>/dev/null)",
+      "Bash(powershell -NoProfile -Command \"\n\\\\$task = New-Object -ComObject Schedule.Service\n\\\\$task.Connect\\(\\)\nWrite-Host 'Task Scheduler COM works'\n\" 2>/dev/null)",
+      "Bash(npm info:*)",
+      "Bash(npm create:*)",
+      "Bash(printf 'y\\\\nignite\\\\n')",
+      "Bash(npx --yes @quick-start/create-electron . --template react-ts)",
+      "Bash(node -e \"const pkg = require\\(''./node_modules/electron-store/package.json''\\); console.log\\(''version:'', pkg.version, ''type:'', pkg.type\\)\")",
+      "Bash(npm run:*)",
+      "Bash(powershell -NoProfile -NonInteractive -Command \":*)",
+      "Bash(node -e \"const p = require\\(''./node_modules/@tailwindcss/vite/package.json''\\); console.log\\(p.version\\)\" \"C:\\\\Users\\\\Yousef\\\\Documents\\\\IT\\\\Code\\\\Ignite\\\\node_modules\\\\@tailwindcss\\\\vite\\\\package.json\")",
+      "Bash(node -e \"const p = require\\(''C:/Users/Yousef/Documents/IT/Code/Ignite/node_modules/@tailwindcss/vite/package.json''\\); console.log\\(p.version\\)\")",
+      "Bash(npm uninstall:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npx electron-vite:*)"
+    ]
+  }
+}
