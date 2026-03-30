@@ -20,7 +20,10 @@ export function createTray(
 
   let icon = nativeImage.createEmpty()
   try {
-    icon = nativeImage.createFromPath(join(__dirname, '../../resources/tray-icon.ico'))
+    const iconPath = app.isPackaged
+      ? join(process.resourcesPath, 'tray-icon.ico') // Where builder put it
+      : join(__dirname, '../../resources/tray-icon.ico') // Where it is locally
+    icon = nativeImage.createFromPath(iconPath)
   } catch {
     // fallback to empty icon if resource missing
   }

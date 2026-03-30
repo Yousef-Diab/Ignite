@@ -9,6 +9,10 @@ directories:
 files:
   - out/**/*
 
+extraResources:
+  - from: resources/tray-icon.ico
+    to: tray-icon.ico
+
 win:
   icon: resources/icon.ico
   target:
