@@ -9,7 +9,7 @@ Ignite is a **Windows desktop app** that lets you build profiles for your games 
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-blue?logo=windows&logoColor=white)](https://github.com/yousef-diab/ignite/releases)
 [![Electron](https://img.shields.io/badge/Electron-35-47848F?logo=electron&logoColor=white)](https://electronjs.org)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Release](https://img.shields.io/github/v/release/yousef-diab/ignite?color=violet)](https://github.com/yousef-diab/ignite/releases)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/yousef-diab/ignite?color=violet)
 
 [**Download**](https://github.com/yousef-diab/ignite/releases) · [**Report a Bug**](https://github.com/yousef-diab/ignite/issues)
 
